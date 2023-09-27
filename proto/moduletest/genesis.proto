@@ -1,0 +1,14 @@
+syntax = "proto3";
+package moduletest.moduletest;
+
+import "gogoproto/gogo.proto";
+import "moduletest/params.proto";
+// this line is used by starport scaffolding # genesis/proto/import
+
+option go_package = "module-test/x/moduletest/types";
+
+// GenesisState defines the moduletest module's genesis state.
+message GenesisState {
+  Params params = 1 [(gogoproto.nullable) = false];
+  // this line is used by starport scaffolding # genesis/proto/state
+}
